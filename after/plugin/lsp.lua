@@ -1,10 +1,24 @@
 local lsp = require("lsp-zero")
 
-lsp.preset("recommended")
+lsp.preset({
+  name = 'minimal',
+  set_lsp_keymaps = true,
+  manage_nvim_cmp = true,
+  suggest_lsp_servers = false,
+})
 
+lsp.setup()
+
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  update_in_insert = false,
+  underline = true,
+  severity_sort = false,
+  float = true,
+})
 
 lsp.ensure_installed({
-  'tsserver',
   'rust_analyzer',
 })
 
@@ -17,9 +31,9 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 	["<C-Space>"] = cmp.mapping.complete(),
 })
 
-lsp.set_preferences({
-	sign_icons = { }
-})
+--lsp.set_preferences({
+--	sign_icons = { }
+--})
 
 lsp.setup_nvim_cmp({
 	mapping = cmp_mappings

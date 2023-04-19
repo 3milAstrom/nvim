@@ -59,5 +59,8 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
 
+    use {
+        'ThePrimeagen/vim-be-good'
+    }
 end)
 
