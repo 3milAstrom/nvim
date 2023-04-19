@@ -20,6 +20,8 @@ vim.diagnostic.config({
 
 lsp.ensure_installed({
   'rust_analyzer',
+  'html',
+  'cssls'
 })
 
 local cmp = require('cmp')

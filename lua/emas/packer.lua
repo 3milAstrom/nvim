@@ -23,7 +23,6 @@ return require('packer').startup(function(use)
         end 
     })
 
-    --  https://www.youtube.com/watch?v=w7i4amO_zaE&t=1588s
     use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use ( 'nvim-treesitter/playground' )
     use ( 'ThePrimeagen/harpoon' )
