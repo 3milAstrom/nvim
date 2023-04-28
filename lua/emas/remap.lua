@@ -19,3 +19,6 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- Add yank to clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+vim.keymap.set("n", "<leader>f", ":! cargo fmt <enter> <enter>")
+vim.keymap.set("n", "<leader>F", ":! cargo clippy --fix <enter> <enter>")
